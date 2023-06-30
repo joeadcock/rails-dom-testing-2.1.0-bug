@@ -3,6 +3,7 @@
 ## Failing spec
 bundle exec rspec
 
+~~~
 An error occurred while loading ./spec/models/application_record_spec.rb.
 Failure/Error: require_relative '../config/environment'
 
@@ -24,7 +25,7 @@ No examples found.
 
 Finished in 0.00006 seconds (files took 0.55748 seconds to load)
 0 examples, 0 failures, 1 error occurred outside of examples
-
+~~~
 
 ## Passing Spec
 
