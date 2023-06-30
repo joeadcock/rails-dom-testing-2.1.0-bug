@@ -1,24 +1,33 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Failing spec
+bundle exec rspec
 
-Things you may want to cover:
+An error occurred while loading ./spec/models/application_record_spec.rb.
+Failure/Error: require_relative '../config/environment'
 
-* Ruby version
+NameError:
+  uninitialized constant HTMLSelector::Minitest
 
-* System dependencies
+    include Minitest::Assertions
+            ^^^^^^^^
+  Did you mean?  MiniMime
+# ./config/application.rb:7:in `<top (required)>'
+# ./config/environment.rb:2:in `require_relative'
+# ./config/environment.rb:2:in `<top (required)>'
+# ./spec/rails_helper.rb:4:in `require_relative'
+# ./spec/rails_helper.rb:4:in `<top (required)>'
+# ./spec/models/application_record_spec.rb:1:in `require'
+# ./spec/models/application_record_spec.rb:1:in `<top (required)>'
+No examples found.
 
-* Configuration
 
-* Database creation
+Finished in 0.00006 seconds (files took 0.55748 seconds to load)
+0 examples, 0 failures, 1 error occurred outside of examples
 
-* Database initialization
 
-* How to run the test suite
+## Passing Spec
 
-* Services (job queues, cache servers, search engines, etc.)
+*uncomment `gem 'rails-dom-testing', '< 2.1.0'` in Gemfile and `bundle update`*
 
-* Deployment instructions
-
-* ...
+`bundle update && bundle exec rspec`
